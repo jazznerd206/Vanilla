@@ -1,0 +1,98 @@
+.perspective {
+    display: flex;
+    align-self: center;
+    align-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 250px;
+    height: 250px;
+    border: 3px solid goldenrod;
+    background: rgb(0,0,0,.25);
+    animation: flip 5s infinite;
+    animation-direction: alternate;
+    border-radius: 50%;
+    box-shadow: inset 0 0 50px #fff,      
+                inset 20px 0 20px goldenrod,
+                inset -20px 0 20px black,
+                inset 20px 0 75px goldenrod,
+                inset -20px 0 75px black,
+                0 0 50px #fff,
+                -10px 0 20px goldenrod,
+                10px 0 20px black;
+
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    background: rgb(250,245,250,.25);
+    width: 300px;
+    height: 300px;
+    border: 3px solid yellow;
+    animation: cork 5s infinite;
+    animation-direction: alternate;
+    border-radius: 50%;
+    box-shadow: inset 0 0 50px #fff,
+                inset 20px 0 80px #00001a,
+                inset -20px 0 80px #add8e6,
+                inset 20px 0 150px #00001a,
+                inset -20px 0 150px #add8e6,
+                0 0 50px #fff,
+                -10px 0 80px #00001a,
+                10px 0 80px #add8e6;
+}
+
+@keyframes flip {
+    0% {
+        transform: rotateY(0deg);
+        width: 300px;
+        height: 300px;
+    }
+    50% {
+        transform: rotateY(360deg);
+        width: 0px;
+        height: 0px;
+    }
+    100% {
+        transform: rotateY(0deg);
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@keyframes cork {
+    0% {
+        transform: rotateY(0deg) rotateX(0deg);
+    }
+    50% {
+        transform: rotateY(360deg);
+        
+    }
+    100% {
+        transform: rotateY(0deg) rotateX(360deg);
+        
+    }
+}
+
+@keyframes rotateAround {
+    0% {
+        transform: rotate3d(0, 0, 0, 45deg);
+        box-shadow: none;
+    }
+    50% {
+        transform: rotate3d(360,360,360, 90deg);
+        box-shadow: inset 0 0 50px #fff,      
+                inset 20px 0 20px goldenrod,
+                inset -20px 0 20px black,
+                inset 20px 0 75px goldenrod,
+                inset -20px 0 75px black,
+                0 0 50px #fff,
+                -10px 0 20px goldenrod,
+                10px 0 20px black;
+        
+    }
+    100% {
+        transform: rotate3d(0, 0, 0, 45deg);
+        box-shadow: none;
+    }
+}

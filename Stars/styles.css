@@ -1,0 +1,33 @@
+canvas{
+	margin:0 auto;
+}
+.starfield {
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 2;
+	pointer-events: none;
+}
+.star {
+	stroke: #ffffff;
+	fill: #ffffff;
+	opacity: 0.8;
+}
+.twinkle {
+	animation: sparkle 3000ms alternate infinite;
+}
+@keyframes sparkle {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
